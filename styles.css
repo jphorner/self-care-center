@@ -11,8 +11,12 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: #ffffff;
+}
+
+h8 {
+  margin-right: 6em;
 }
 
 .title {
@@ -21,7 +25,7 @@ h1, h2, h3 {
 }
 
 .button-box {
-  margin-top: 10px;
+  /* margin-top: 5px; */
   margin-left: 28em;
   margin-right: 28em;
   background-color: #ffffff;
@@ -39,7 +43,7 @@ h1, h2, h3 {
 .receive-message {
     background-color: #134D71;
     border-radius: 5px;
-    border: 0px;
+    border: 2px;
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
     padding: 2px;
@@ -50,10 +54,10 @@ h1, h2, h3 {
 }
 
 .message-load {
-  padding: 20px;
-  margin-top: 70px;
-  margin-left: 18em;
-  margin-right: 18em;
+  padding: 10px;
+  margin-top: 90px;
+  margin-left: 16em;
+  margin-right: 16em;
   background-color: #ffffff;
   border: 1px solid white;
   border-radius: 5px
