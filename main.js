@@ -1,5 +1,6 @@
 var returnMessageButton = document.querySelector('.receive-message');
 var message = document.querySelector('.message');
+var messageType = document.getElementsByName('message-type-select');
 
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
@@ -35,11 +36,19 @@ var affirmations = [
   "I manifest perfect health by making smart choices."
 ];
 
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
 
 returnMessageButton.addEventListener('click', returnMessage)
 
 function returnMessage() {
-  console.log('Josh was here.');
-  console.log(affirmations[0])
-  message.classList.remove('hidden');
+  for (i = 0; i < messageType.length; i++) {
+    if (document.getElementById('affirmation-select').checked) {
+      console.log('Josh was here.');
+      message.innerText = affirmations[getRandomIndex(affirmations)];
+    } else if (document.getElementById('mantra-select').checked) {
+      message.innerText = mantras[getRandomIndex(mantras)];
+    }
+  }
 };
