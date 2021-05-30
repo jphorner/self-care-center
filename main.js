@@ -1,6 +1,12 @@
 var returnMessageButton = document.querySelector('.receive-message');
-var message = document.querySelector('.message');
+var fadeInMessage = document.querySelector('.fade-in-message');
 var messageType = document.getElementsByName('message-type-select');
+var meditationImage = document.querySelector('.meditation-image');
+var clearMessageButton = document.querySelector('.clear-message');
+var messageBox = document.querySelector('.message-load-box');
+
+returnMessageButton.addEventListener('click', returnMessage);
+clearMessageButton.addEventListener('click', clearMessage);
 
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
@@ -18,6 +24,7 @@ var mantras = [
   "The only constant is change.",
   "Onward and upward.",
   "I am the sky, the rest is weather.",
+  " ",
 ];
 
 var affirmations = [
@@ -40,15 +47,36 @@ function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
 };
 
-returnMessageButton.addEventListener('click', returnMessage)
+function removeImage() {
+  meditationImage.parentNode.removeChild(meditationImage);
+  // meditationImage.style.height = 0;
+  // meditationImage.style.width = 0;
+};
+
+function displayImage() {
+  meditationImage.style.visibility = "visible";
+  messageBox.appendChild(meditationImage);
+};
 
 function returnMessage() {
   for (i = 0; i < messageType.length; i++) {
     if (document.getElementById('affirmation-select').checked) {
       console.log('Josh was here.');
-      message.innerText = affirmations[getRandomIndex(affirmations)];
+      fadeInMessage.innerText = affirmations[getRandomIndex(affirmations)];
     } else if (document.getElementById('mantra-select').checked) {
-      message.innerText = mantras[getRandomIndex(mantras)];
+      fadeInMessage.innerText = mantras[getRandomIndex(mantras)];
+    } else {
+      fadeInMessage.innerText =
+      "It looks like you haven't selected a message type. Try again?"
     }
+    removeImage();
+    fadeInMessage.style.visibility = "visible";
+    clearMessageButton.style.visibility = "visible";
   }
 };
+
+function clearMessage() {
+  fadeInMessage.innerText = null;
+  clearMessageButton.style.visibility = "hidden";
+  displayImage();
+}

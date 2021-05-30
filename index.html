@@ -3,6 +3,7 @@
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
     <center>
@@ -20,13 +21,16 @@
         <h8></h8>
         <input type="radio" class="mantra" id="mantra-select" name="message-type-select" value="mantra">
         <label for="mantra"><i>mantra</i></label><p>
-        <button class="receive-message"><p><h4>Receive Message</h4></p></button>
       </div>
+      <button class="receive-message"><p><h4>Receive Message</h4></p></button>
     </section>
 
-    <section class="message-load">
-      <p><img src="assets/meditate.svg"></p>
-      <div class="message">Test</div>
+    <section class="message-load-box">
+      <!-- <ol> -->
+        <center><img src="assets/meditate.svg" class="meditation-image"></center>
+        <h2><i><section class="fade-in-message"></section></i></h2>
+        <button class="clear-message">Clear Message</button>
+      <!-- </ol> -->
     </section>
     </center>
     <script type="text/javascript" src="main.js"></script>
