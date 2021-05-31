@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $('#title').fadeIn(1000).removeClass('hidden');
     $('div').delay(800).fadeIn(1200).removeClass('hidden');
-    $('#query-text').delay(1000).fadeIn(800).removeClass('hidden');
+    $('#query-text').delay(800).fadeIn(800).removeClass('hidden');
     $('#button-box').delay(800).fadeIn(800).removeClass('hidden');
     $('#receive-message').delay(800).fadeIn(500).removeClass('hidden');
     $('#message-load-box').delay(1500).fadeIn(1000).removeClass('hidden');
