@@ -11,7 +11,7 @@ body {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1, h4 {
+h1 {
   color: #ffffff;
 }
 
@@ -26,19 +26,19 @@ h3 {
   padding-top: 50px;
 }
 
+h4 {
+  margin: 12px;
+}
+
 p {
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
-h8 {
-  margin-right: 6em;
-}
-
-img {
-  display: hidden;
+.meditation-image {
   width: 100px;
   height: 100px;
+  padding-bottom: 20px;
   object-fit: cover;
   align-content: center;
 }
@@ -49,37 +49,25 @@ img {
 
 .hidden {
   display: none;
-  margin-top: 50px;
-  margin-bottom: 75px;
 }
 
-
-.button-box {
-  /* margin-top: 5px; */
-  margin-left: 28em;
-  margin-right: 28em;
+#button-box {
+  display: none;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-left: 26em;
+  margin-right: 26em;
   margin-bottom: 100px;
   background-color: #ffffff;
   border: 1px solid white;
   border-radius: 5px
 }
 
-.fade-in-message {
-  font-family: 'Quicksand', sans-serif;
-  display: inline-block;
-  padding-bottom: 10px;
-  animation: fadeIn linear 3s;
-  -webkit-animation: fadeIn linear 3s;
-  -moz-animation: fadeIn linear 3s;
-  -o-animation: fadeIn linear 3s;
-  -ms-animation: fadeIn linear 3s;
-}
-
 .clear-message {
   display: none;
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
-  margin-top: 10px;
+  margin-top: 20px;
   border-color: #ffffff;
   border-radius: 5px;
   border: 0px;
@@ -89,7 +77,10 @@ img {
   background-color: #134D71;
 }
 
-.message-selection {
+#query-text {
+  display: none;
+  font-family: 'Quicksand', sans-serif;
+  color: #ffffff;
   margin-top: 15px;
   margin-bottom: 15px;
   margin-left: 10px;
@@ -97,21 +88,22 @@ img {
   color: #134D71;
 }
 
-.receive-message {
-    background-color: #134D71;
-    height: 30px;
-    border-radius: 5px;
-    border: 2px;
-    color: #ffffff;
-    font-family: 'Quicksand', sans-serif;
-    margin-bottom: 10px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-top: 2px;
-    padding-bottom: 2px;
+#receive-message {
+  display: none;
+  background-color: #134D71;
+  height: 30px;
+  border-radius: 5px;
+  border: 2px;
+  color: #ffffff;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
-.message-load-box {
+#message-load-box {
+  display: none;
   padding: 15px;
   padding-top: 35px;
   margin-top: 0px;
@@ -121,7 +113,6 @@ img {
   border: 1px solid white;
   border-radius: 5px
 }
-
 
   /* COLORS
   light-yellow - #f7e4bf;

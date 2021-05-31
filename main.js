@@ -1,9 +1,13 @@
 $(document).ready(function () {
-    $('div.hidden').fadeIn(1500).removeClass('hidden');
+    $('div').fadeIn(1200).removeClass('hidden');
+    $('#query-text').fadeIn(1500).removeClass('hidden');
+    $('#button-box').fadeIn(1800).removeClass('hidden');
+    $('#receive-message').fadeIn(2100).removeClass('hidden');
+    $('#message-load-box').fadeIn(2500).removeClass('hidden');
 });
 
-var returnMessageButton = document.querySelector('.receive-message');
-var fadeInMessage = document.querySelector('.fade-in-message');
+var returnMessageButton = document.querySelector('#receive-message');
+var message = document.querySelector('.message');
 var messageType = document.getElementsByName('message-type-select');
 var meditationImage = document.querySelector('.meditation-image');
 var clearMessageButton = document.querySelector('.clear-message');
@@ -53,11 +57,11 @@ function returnMessage() {
   for (i = 0; i < messageType.length; i++) {
     if (document.getElementById('affirmation-select').checked) {
       console.log('Josh was here.'); //Don't remove - vital
-      fadeInMessage.innerText = affirmations[getRandomIndex(affirmations)];
+      message.innerText = affirmations[getRandomIndex(affirmations)];
     } else if (document.getElementById('mantra-select').checked) {
-      fadeInMessage.innerText = mantras[getRandomIndex(mantras)];
+      message.innerText = mantras[getRandomIndex(mantras)];
     } else {
-      fadeInMessage.innerText =
+      message.innerText =
       "It looks like you haven't selected a message type. Try again?";
     }
   }
@@ -78,7 +82,7 @@ function toggleImage() {
 };
 
 function checkImageToggle() {
-  if (fadeInMessage.innerText === null) {
+  if (message.innerText === null) {
     meditationImage.style.display = "block"
   } else {
     meditationImage.style.display = "none";
@@ -86,23 +90,21 @@ function checkImageToggle() {
 }
 
 function toggleClearButton() {
-  // clearMessageButton.style.visibility = "visible";
   if (clearMessageButton.style.display === "none") {
     clearMessageButton.style.display = "block";
   } else {
     clearMessageButton.style.display = "none";
   }
-  // checkImageToggle();
 };
 
 function checkClearToggle() {
-  if (!fadeInMessage.style.display === null) {
+  if (!message.style.display === null) {
     clearMessageButton.style.display = "block";
   }
 }
 
 function clearMessage() {
-  fadeInMessage.innerText = null;
+  message.innerText = null;
   clearMessageButton.style.display = "none";
   meditationImage.style.display = "block";
 };
