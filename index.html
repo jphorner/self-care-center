@@ -1,11 +1,38 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
+
   <body>
-  
+    <center>
+    <h1>
+      <section class="title">
+      <div class="hidden" id="title"><center>✨ Self Care Center ✨</center></div>
+      </section>
+    </h1>
+    <div class="hidden" id="query-text"><h3>Which type of message?</h3></div>
+    <p>
+      <section class="hidden" id="button-box">
+    </p>
+        <div class="hidden">
+          <input type="radio" class="affirmation" id="affirmation-select" name="message-type-select" value="affirmation">
+          <label for="affirmation"><i>affirmation</i></label>
+            <h8></h8>
+          <input type="radio" class="mantra" id="mantra-select" name="message-type-select" value="mantra">
+          <label for="mantra"><i>mantra</i></label>
+        </div>
+        <div><button class="hidden" id="receive-message">Receive Message</button></div>
+    </section>
+    <section class="hidden" id="message-load-box">
+        <center><img src="assets/meditate.svg" class="meditation-image"></center>
+          <section class="message"></section>
+        <div><button class="clear-message">Clear Message</button></div>
+    </section>
+    </center>
     <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
