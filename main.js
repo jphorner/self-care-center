@@ -1,3 +1,7 @@
+$(document).ready(function () {
+    $('div.hidden').fadeIn(1500).removeClass('hidden');
+});
+
 var returnMessageButton = document.querySelector('.receive-message');
 var fadeInMessage = document.querySelector('.fade-in-message');
 var messageType = document.getElementsByName('message-type-select');
@@ -7,6 +11,7 @@ var messageBox = document.querySelector('.message-load-box');
 
 returnMessageButton.addEventListener('click', returnMessage);
 clearMessageButton.addEventListener('click', clearMessage);
+
 
 var mantras = [
   "Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.",
@@ -24,7 +29,6 @@ var mantras = [
   "The only constant is change.",
   "Onward and upward.",
   "I am the sky, the rest is weather.",
-  " ",
 ];
 
 var affirmations = [
@@ -43,40 +47,66 @@ var affirmations = [
   "I manifest perfect health by making smart choices."
 ];
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
-};
 
-function removeImage() {
-  meditationImage.parentNode.removeChild(meditationImage);
-  // meditationImage.style.height = 0;
-  // meditationImage.style.width = 0;
-};
-
-function displayImage() {
-  meditationImage.style.visibility = "visible";
-  messageBox.appendChild(meditationImage);
-};
 
 function returnMessage() {
   for (i = 0; i < messageType.length; i++) {
     if (document.getElementById('affirmation-select').checked) {
-      console.log('Josh was here.');
+      console.log('Josh was here.'); //Don't remove - vital
       fadeInMessage.innerText = affirmations[getRandomIndex(affirmations)];
     } else if (document.getElementById('mantra-select').checked) {
       fadeInMessage.innerText = mantras[getRandomIndex(mantras)];
     } else {
       fadeInMessage.innerText =
-      "It looks like you haven't selected a message type. Try again?"
+      "It looks like you haven't selected a message type. Try again?";
     }
-    removeImage();
-    fadeInMessage.style.visibility = "visible";
-    clearMessageButton.style.visibility = "visible";
+  }
+  checkImageToggle();
+  clearMessageButton.style.display = "block";
+};
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};
+
+function toggleImage() {
+  if (meditationImage.style.display === "none") {
+    meditationImage.style.display = "block";
+  } else {
+    meditationImage.style.display = "none";
   }
 };
 
+function checkImageToggle() {
+  if (fadeInMessage.innerText === null) {
+    meditationImage.style.display = "block"
+  } else {
+    meditationImage.style.display = "none";
+  }
+}
+
+function toggleClearButton() {
+  // clearMessageButton.style.visibility = "visible";
+  if (clearMessageButton.style.display === "none") {
+    clearMessageButton.style.display = "block";
+  } else {
+    clearMessageButton.style.display = "none";
+  }
+  // checkImageToggle();
+};
+
+function checkClearToggle() {
+  if (!fadeInMessage.style.display === null) {
+    clearMessageButton.style.display = "block";
+  }
+}
+
 function clearMessage() {
   fadeInMessage.innerText = null;
-  clearMessageButton.style.visibility = "hidden";
-  displayImage();
-}
+  clearMessageButton.style.display = "none";
+  meditationImage.style.display = "block";
+};
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+};

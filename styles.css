@@ -4,20 +4,26 @@ html {
    -moz-background-size: cover;
    -o-background-size: cover;
    background: rgb(19,77,113);
-   background: linear-gradient(180deg, rgba(19,77,113,1) 14%, rgba(49,103,138,1) 34%, rgba(102,151,183,1) 60%, rgba(171,188,180,1) 79%, rgba(228,218,178,1) 100%);;
+   background: linear-gradient(180deg, rgba(19,77,113,1) 15%, rgba(49,103,138,1) 30%, rgba(102,151,183,1) 50%, rgba(171,188,180,1) 79%, rgba(228,218,178,1) 100%);;
   }
 
 body {
   font-family: 'Quicksand', sans-serif;
 }
 
-h1, h3, h4 {
+h1, h4 {
   color: #ffffff;
 }
 
 h2 {
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+h3 {
+  color: #ffffff;
+  margin: 12px;
+  padding-top: 50px;
 }
 
 p {
@@ -30,6 +36,7 @@ h8 {
 }
 
 img {
+  display: hidden;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -37,24 +44,31 @@ img {
 }
 
 .title {
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
   margin-top: 50px;
   margin-bottom: 75px;
 }
+
 
 .button-box {
   /* margin-top: 5px; */
   margin-left: 28em;
   margin-right: 28em;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   background-color: #ffffff;
   border: 1px solid white;
   border-radius: 5px
 }
 
 .fade-in-message {
+  font-family: 'Quicksand', sans-serif;
   display: inline-block;
+  padding-bottom: 10px;
   animation: fadeIn linear 3s;
-  visibility: hidden;
   -webkit-animation: fadeIn linear 3s;
   -moz-animation: fadeIn linear 3s;
   -o-animation: fadeIn linear 3s;
@@ -62,15 +76,17 @@ img {
 }
 
 .clear-message {
+  display: none;
   font-family: 'Quicksand', sans-serif;
   color: #ffffff;
-  visibility: hidden;
   margin-top: 10px;
   border-color: #ffffff;
   border-radius: 5px;
-  background: rgb(19,77,113);
-  /* background: linear-gradient(180deg, rgba(19,77,113,1) 14%, rgba(49,103,138,1) 34%, rgba(102,151,183,1) 60%, rgba(171,188,180,1) 85%, rgba(228,218,178,1) 100%); */
-  background: linear-gradient(180deg, rgba(228,218,178,1) 8%, rgba(171,188,180,1) 18%, rgba(102,151,183,1) 30%, rgba(49,103,138,1) 85%, rgba(19,77,113,1) 100%);
+  border: 0px;
+  padding: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #134D71;
 }
 
 .message-selection {
@@ -83,27 +99,24 @@ img {
 
 .receive-message {
     background-color: #134D71;
+    height: 30px;
     border-radius: 5px;
     border: 2px;
     color: #ffffff;
     font-family: 'Quicksand', sans-serif;
     margin-bottom: 10px;
-    padding: 2px;
-    padding-right: 10px;
-    padding-left: 10px;
-    /* margin-top: 2px;
-    margin-bottom: 2px; */
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 .message-load-box {
-  padding: 0px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 15px;
+  padding-top: 35px;
   margin-top: 0px;
-  margin-left: 16em;
-  margin-right: 16em;
+  margin-left: 15em;
+  margin-right: 15em;
   background-color: #ffffff;
   border: 1px solid white;
   border-radius: 5px
