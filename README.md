@@ -2,10 +2,10 @@
 
 The Self Care Center is a web page which generates random mantras and affirmations at the click of a button.
 
-
 ## Usage
 
-There is no installation required; all features are contained within the web page.
+**Installation**
+- There is no installation required; all features are contained within the web page.
 
 **Page Load**
 - Upon loading, the page's element containers appear one-by-one.
@@ -35,4 +35,5 @@ This project is free for anyone to fork and edit for themselves.
 ## Authors and Acknowledgement
 
 Designed and coded by Joshua Horner.
+
 Meditation image and message arrays provided by the Turing School of Software and Design.
