@@ -22,7 +22,7 @@ There is no installation required; all features are contained within the web pag
 
 ## Demonstration
 
-
+![recording (1)](https://user-images.githubusercontent.com/82003147/120131795-54f43100-c186-11eb-9043-a1bcab17410d.gif)
 
 ## Project Status
 
